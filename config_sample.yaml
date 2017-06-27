@@ -1,0 +1,22 @@
+login:
+  username: '1234567890'
+  password: '12345678'
+
+browser:
+  path: 'firefox51/firefox'
+  profile: 'default'
+
+job:
+  cnae_code: '10100200'
+  description: 'Desenvolvimento de software'
+  income: 1000
+
+company:
+  cnpj: '74.074.074/7474-74'
+  name: 'Carta ao Tom'
+  zip_code: '22421-020'
+  street: 'Nascimento Silva'
+  street_number: 107
+  neighborhood: 'Ipanema'
+  city: 'Rio de Janeiro'
+  state: 'RJ'
