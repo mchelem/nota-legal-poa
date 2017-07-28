@@ -3,7 +3,7 @@ login:
   password: '12345678'
 
 browser:
-  path: 'firefox51/firefox'
+  path: 'firefox52esr/firefox'
   profile: 'default'
 
 job:
