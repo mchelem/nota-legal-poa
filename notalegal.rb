@@ -28,7 +28,9 @@ module NotaLegal
     pis: 'form:valorPis',
     cofins: 'form:valorCofins',
     csll: 'form:valorCSLL',
-    emit_invoice: 'form:bt_emitir_NFS-e'
+    emit_invoice: 'form:bt_emitir_NFS-e',
+    service_identification_tab: 'topo_aba2',
+    values_tab: 'topo_aba3'
   }.freeze
   # rubocop:enable LineLength
 

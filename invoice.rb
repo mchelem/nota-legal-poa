@@ -76,13 +76,13 @@ class InvoiceWebApplicationClient
   end
 
   def fill_job_description(job)
-    @browser.link(href: "javascript:controlaAbas('aba2');").click
+    @browser.div(id: id(:service_identification_tab)).click
     @browser.textarea(id: id(:service_description)).set(job.description)
     @browser.select_list(id: id(:activity_code)).select_value(job.cnae_code)
   end
 
   def fill_income_and_taxes(job)
-    @browser.link(href: "javascript:controlaAbas('aba3');").click
+    @browser.div(id: id(:values_tab)).click
     @browser.text_field(id: id(:income)).set(currency(job.income))
 
     fill_taxes job.income
@@ -113,7 +113,7 @@ def load_config(filename)
 end
 
 if ARGV.length != 1
-    puts 'Usage: ./invoice.rb config.yaml'
+  puts 'Usage: ./invoice.rb config.yaml'
 else
   config = load_config ARGV[0]
   client = InvoiceWebApplicationClient.new
