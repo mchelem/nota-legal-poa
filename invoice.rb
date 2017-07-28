@@ -77,6 +77,7 @@ class InvoiceWebApplicationClient
 
   def fill_job_description(job)
     @browser.div(id: id(:service_identification_tab)).click
+    @browser.textarea(id: id(:service_description)).wait_until_present
     @browser.textarea(id: id(:service_description)).set(job.description)
     @browser.select_list(id: id(:activity_code)).select_value(job.cnae_code)
   end
