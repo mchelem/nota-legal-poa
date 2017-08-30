@@ -80,7 +80,7 @@ class InvoiceWebApplicationClient
 
   def reset_company_id(company)
     # HACK: setting these fields again because they get erased
-    # Setting them only here doesn't work as other fields will go missing
+    # Setting them only once doesn't work (other fields are cleared)
     @browser.text_field(id: id(:cnpj)).set(company.cnpj)
     @browser.text_field(id: id(:company_name)).set(company.name)
   end
