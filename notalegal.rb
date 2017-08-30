@@ -8,6 +8,7 @@ module NotaLegal
     password: 'password',
     generate_invoice: 'geracao',
     fill_date_today: /MesReferenciaModalPanelSubview:formMesReferencia:j_id/,
+    date: 'MesReferenciaModalPanelSubview:formMesReferencia:dtCompetencia',
     confirm_invoice: 'MesReferenciaModalPanelSubview:formMesReferencia:bt_confirmar_comp_subs',
     company_type_cnpj: 'form:tipoPessoa:1',
     cnpj: 'form:numDocumento',
@@ -32,6 +33,13 @@ module NotaLegal
     service_identification_tab: 'topo_aba2',
     values_tab: 'topo_aba3'
   }.freeze
+
+  SCRIPTS = {
+    # Can't click the menu:bt_emissao element directly because it's hidden
+    generate_invoice: "window.document.getElementById('menu:bt_emissao').click()",
+    service_description_tab: "controlaAbas('aba2')",
+    income_tab: "controlaAbas('aba3')"
+  }.freeze
   # rubocop:enable LineLength
 
   URL = 'https://nfe.portoalegre.rs.gov.br'.freeze
@@ -41,5 +49,9 @@ module NotaLegal
 
   def id(name)
     ELEMENT_ID[name]
+  end
+
+  def script(name)
+    SCRIPTS[name]
   end
 end
