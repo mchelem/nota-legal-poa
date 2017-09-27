@@ -1,26 +1,26 @@
-# Usage
+# Como usar
 
-Copy the config_sample.yaml and edit it to reflect your needs, then run:
+Faça uma cópia do arquivo config_sample.yaml e adicione seus dados. Execute o seguinte comando:
 
 ```
 ./invoice.rb config.yaml
 ```
 
-# Dependencies
+# Dependências
 
-## Firefox (with Java Plugin support):
+## Firefox (com suporte ao Plugin Java):
 
-You can use either version 52 ESR or 51. ESR works better with recent versions
-of the geckodriver.
+Você pode usar a versão 52 ESR ou a versão 51. O ESR funciona melhor com versões mais
+recentes do geckodriver.
 
-More on ESR: https://www.mozilla.org/en-US/firefox/organizations/faq/
+Mais sobre o ESR: https://www.mozilla.org/en-US/firefox/organizations/faq/
 
-More on when and why Firefox dropped support to NPAPI plugins (including Java):
+Mais sobre quando e por que o Firefox removeu o suporte a plugins NPAPI (incluindo Java):
 https://support.mozilla.org/en-US/kb/npapi-plugins
 
-Download old versions: https://ftp.mozilla.org/pub/firefox/releases/
+Download de versões antigas do firefox: https://ftp.mozilla.org/pub/firefox/releases/
 
-## Geckodriver (Firefox web driver):
+## Geckodriver (web driver do Firefox):
 
 Download:
 
